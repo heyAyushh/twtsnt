@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+  twtsnt:
+    image: twtsnt
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+      - 3001:3001
