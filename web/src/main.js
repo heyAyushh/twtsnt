@@ -6,7 +6,9 @@ import router from './router'
 import socketio from 'socket.io-client';
 import VueSocketIO from 'vue-socket.io';
 
-const SocketInstance = socketio.connect('https://twtsnt.azurewebsites.net/', {
+// Change socket url according to  your deployment
+// Change it to localhost while running project locally
+const SocketInstance = socketio.connect('http://twtsnt.azurewebsites.net/', {
     query: {
         token: window.localStorage.getItem('auth')
     }
