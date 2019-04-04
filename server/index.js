@@ -38,7 +38,7 @@ const producer = kafka.producer()
 */
 
 // Serve all the files in '/dist' directory
-app.use(express.static("dist"));
+app.use(express.static(__dirname + '/dist'));
 
 // get word from websocket
 io.on("connection", function(socket) {
